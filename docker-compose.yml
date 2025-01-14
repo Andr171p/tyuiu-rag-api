@@ -33,6 +33,7 @@ services:
       ELASTIC_PASSWORD: "MyPw123"
       discovery.type: single-node
     volumes:
+      - ./configs/elasticsearch/config.yml:/usr/share/elasticsearch/docker/config/elasticsearch.yml:ro
       - es-data:/usr/share/elasticsearch/data
     ports:
       - "9200:9200"

@@ -1,5 +1,7 @@
 from src.core.rag.chain import ChainBuilder
 
+from langchain.schema import HumanMessage
+
 
 class ChatService:
     def __init__(self) -> None:
@@ -12,7 +14,7 @@ class ChatService:
         ).create_chain()
 
     async def answer_on_question(self, question: str) -> str:
-        return await self._chain.ainvoke({"text": question})
+        return await self._chain.ainvoke(question)
 
 
 from elasticsearch import Elasticsearch
@@ -36,7 +38,7 @@ chat_service = ChatService()
 
 import asyncio
 async def main() -> None:
-    answer = await chat_service.answer_on_question("Расскажи о ТИУ")
+    answer = await chat_service.answer_on_question("Расскажи о Тюменском индустриальном университете")
     print(answer)
 
 

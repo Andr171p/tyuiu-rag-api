@@ -6,8 +6,8 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 class TextSplitter(RecursiveCharacterTextSplitter):
     def __init__(
             self,
-            chunk_size: int = 1500,
-            chunk_overlap: int = 500,
+            chunk_size: int = 1000,
+            chunk_overlap: int = 100,
             length_function: Callable = len
     ) -> None:
         super().__init__(

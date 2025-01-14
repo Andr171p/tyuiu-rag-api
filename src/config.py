@@ -64,7 +64,3 @@ class Settings(BaseSettings):
 
 
 settings = Settings()
-
-import requests
-r = requests.get(settings.es.url)
-print(r.json())
