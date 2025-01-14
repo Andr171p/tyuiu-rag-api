@@ -17,5 +17,4 @@ class GigaChatLLM(GigaChat):
             scope=scope,
             model="GigaChat-Pro",
             verify_ssl_certs=verify_ssl_certs,
-            profanity_check=profanity_check
         )
