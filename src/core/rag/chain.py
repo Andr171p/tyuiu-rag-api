@@ -37,14 +37,14 @@ class ChainBuilder:
     def set_ensemble_retriever(
             self,
             k: int = 5,
-            text: str = load_txt(r"C:\Users\andre\TyuiuRAG\static\texts\ТИУ для абитуриентов.txt")
+            text: str = load_txt(settings.static.text_path)
     ) -> "ChainBuilder":
         documents = TextSplitter().create_documents([text])
         elastic_search_retriever = ElasticSearchRetriever()
-        '''elastic_search_retriever.add_texts([
+        elastic_search_retriever.add_texts([
             document.page_content
             for document in documents
-        ])'''
+        ])
         chroma = ChromaVectorStore(EmbeddingsModel())
         chroma.delete_collection()
         chroma.add_texts([document.page_content for document in documents])
@@ -59,7 +59,7 @@ class ChainBuilder:
         return self
 
     def set_chat_prompt(self) -> "ChainBuilder":
-        template: str = load_txt(r"C:\Users\andre\TyuiuRAG\static\prompt\chat.txt")
+        template: str = load_txt(settings.static.prompt_path)
         self._chat_prompt = ChatPromptTemplate.from_template(template)
         return self
 

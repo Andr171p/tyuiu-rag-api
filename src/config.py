@@ -13,8 +13,8 @@ load_dotenv(ENV_PATH)
 
 
 class EmbeddingsSettings(BaseSettings):
-    model_name: str = "sentence-transformers/paraphrase-multilingual-mpnet-base-v2"
-    # model_name: str = "d0rj/e5-base-en-ru"
+    # model_name: str = "sentence-transformers/paraphrase-multilingual-mpnet-base-v2"
+    name: str = "d0rj/e5-base-en-ru"
     model_kwargs: Dict[str, str] = {"device": "cpu"}
     encode_kwargs: Dict[str, bool] = {'normalize_embeddings': False}
 
@@ -40,7 +40,7 @@ class GigaChatSettings(BaseSettings):
     auth_key: str = os.getenv("AUTH_KEY")
     scope: str = os.getenv("GIGACHAT_API_PERS")
     url: str = os.getenv("AUTH_URL")
-    # model_name: str = os.getenv("MODEL_NAME")
+    name: str = os.getenv("MODEL_NAME")
     prompt: Path = BASE_DIR / "static" / "prompt" / "chat.txt"
 
 
@@ -64,3 +64,7 @@ class Settings(BaseSettings):
 
 
 settings = Settings()
+
+import requests
+r = requests.get(settings.es.url)
+print(r.json())

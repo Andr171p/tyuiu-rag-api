@@ -1,7 +1,6 @@
 from langchain_community.chat_models.gigachat import GigaChat
 
 from src.config import settings
-print(f"LLM {settings.giga_chat.name}")
 
 
 class GigaChatLLM(GigaChat):

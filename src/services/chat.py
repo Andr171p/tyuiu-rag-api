@@ -15,7 +15,7 @@ class ChatService:
         return await self._chain.ainvoke({"text": question})
 
 
-'''from elasticsearch import Elasticsearch
+from elasticsearch import Elasticsearch
 from src.config import settings
 
 # Подключение к Elasticsearch
@@ -29,7 +29,7 @@ if es.indices.exists(index=index_name):
     es.indices.delete(index=index_name)
     print(f"Индекс '{index_name}' успешно удалён.")
 else:
-    print(f"Индекс '{index_name}' не существует.")'''
+    print(f"Индекс '{index_name}' не существует.")
 
 
 chat_service = ChatService()

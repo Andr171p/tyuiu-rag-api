@@ -7,6 +7,13 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
+fastapi = {extras = ["all"], version = "^0.115.6"}
+langchain = "^0.3.14"
+gigachain = "^0.2.16"
+elasticsearch = "^8.17.0"
+gigachain-community = "^0.2.16.post3"
+chromadb = "^0.6.2"
+sentence-transformers = "^3.3.1"
 
 
 [build-system]
