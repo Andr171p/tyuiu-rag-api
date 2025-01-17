@@ -12,7 +12,9 @@ class ChromaVectorStore(Chroma):
     def __init__(
             self,
             embeddings: "Embeddings",
-            client: Any = HttpClient(),
+            client: Any = HttpClient(
+                host="chromadb-production-d8e5.up.railway.app"
+            ),
             settings: Settings = Settings(),
             collection_name: str = "tyuiu"
     ) -> None:
