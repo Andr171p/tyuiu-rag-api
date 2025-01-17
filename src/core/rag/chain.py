@@ -70,7 +70,6 @@ class ChainBuilder:
             {"context": self._ensemble_retriever | format_docs, "input": RunnablePassthrough()} |
             self._chat_prompt |
             self._llm |
-            self._output_parser |
             self._output_parser
         )
         return chain

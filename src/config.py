@@ -25,10 +25,12 @@ class ChromaSettings(BaseSettings):
 
 
 class ElasticSearchSettings(BaseSettings):
-    '''host: str = "localhost"
+    """
+    host: str = "localhost"
     port: int = 9200
     username: str = "elastic"
-    password: str = "MyPw123"'''
+    password: str = "MyPw123"
+    """
 
     host: str = "elasticsearch-production-ac86.up.railway.app"
     port: int = 9200

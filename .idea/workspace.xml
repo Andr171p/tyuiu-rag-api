@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0261eaa4-7bd7-4906-a26c-a70cfdc148e2" name="Changes" comment="[tyuiu-rag-api] 17.01.2025">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-    </list>
+    <list default="true" id="0261eaa4-7bd7-4906-a26c-a70cfdc148e2" name="Changes" comment="[tyuiu-rag-api] 17.01.2025 production" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -200,13 +196,22 @@
       <option name="project" value="LOCAL" />
       <updated>1737123748042</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="[tyuiu-rag-api] 17.01.2025 production">
+      <option name="closed" value="true" />
+      <created>1737125702417</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1737125702417</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[tyuiu-rag-api] 14.01.2025 chain" />
     <MESSAGE value="[tyuiu-rag-api] 14.01.2025" />
     <MESSAGE value="[tyuiu-rag-api] 17.01.2025" />
-    <option name="LAST_COMMIT_MESSAGE" value="[tyuiu-rag-api] 17.01.2025" />
+    <MESSAGE value="[tyuiu-rag-api] 17.01.2025 production" />
+    <option name="LAST_COMMIT_MESSAGE" value="[tyuiu-rag-api] 17.01.2025 production" />
   </component>
 </project>
