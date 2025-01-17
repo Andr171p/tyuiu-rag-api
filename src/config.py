@@ -46,7 +46,7 @@ class GigaChatSettings(BaseSettings):
 
 class StaticSettings(BaseSettings):
     text_path: Path = BASE_DIR / "static" / "texts" / "ТИУ для абитуриентов.txt"
-    prompt_path: Path = BASE_DIR / "static" / "prompt" / "chat.txt"
+    prompt_path: Path = BASE_DIR / "static" / "prompt" / "Сотрудник приёмной комиссии.txt"
 
 
 class APISettings(BaseSettings):

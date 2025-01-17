@@ -1,6 +1,6 @@
 from typing import TYPE_CHECKING, Any
 
-from chromadb import AsyncHttpClient, HttpClient
+from chromadb import HttpClient
 from chromadb.config import Settings
 from langchain_community.vectorstores import Chroma
 

@@ -6,18 +6,17 @@ from typing import (
 from langchain.retrievers import EnsembleRetriever
 from langchain.prompts import ChatPromptTemplate
 from langchain_core.output_parsers.string import StrOutputParser
-# from langchain_core.runnables.passthrough import RunnablePassthrough
-from langchain.schema.runnable import RunnablePassthrough
+from langchain_core.runnables import RunnablePassthrough
 
-from src.core.rag.modules import (
-    TextSplitter,
+from src.core.rag.services import (
     ElasticSearchRetriever,
     ChromaVectorStore,
     EmbeddingsModel,
     GigaChatLLM
 )
+from src.core.rag.utils import format_docs
 from src.misc.loaders import load_txt
-from src.config import settings, BASE_DIR
+from src.config import settings
 
 if TYPE_CHECKING:
     from langchain_core.retrievers import BaseRetriever
@@ -39,22 +38,11 @@ class ChainBuilder:
     def set_ensemble_retriever(
             self,
             k: int = 3,
-            text: str = load_txt(settings.static.text_path)
     ) -> "ChainBuilder":
-        documents = TextSplitter().create_documents([text])
         elastic_search_retriever = ElasticSearchRetriever()
-        elastic_search_retriever.add_texts([
-            document.page_content
-            for document in documents
-        ])
-        print("Данные добавлены в ES")
         chroma = ChromaVectorStore(EmbeddingsModel())
-        # chroma.delete_collection()
-        # chroma.add_documents(documents)
-        print("=========================================")
+        chroma.delete_collection()
         chroma_retriever = chroma.as_retriever(search_kwargs={"k": k})
-        print("===========================================================")
-        print(chroma_retriever.invoke("расскажи о ТИУ"))
         self._ensemble_retriever = EnsembleRetriever(
             retrievers=[
                 elastic_search_retriever,
@@ -62,8 +50,6 @@ class ChainBuilder:
             ],
             weights=[0.4, 0.6]
         )
-        print("===========================================================")
-        print(self._ensemble_retriever.invoke("Расскажи о Тюменском индустриальном университете"))
         return self
 
     def set_chat_prompt(self) -> "ChainBuilder":
@@ -81,8 +67,10 @@ class ChainBuilder:
 
     def create_chain(self) -> "Runnable":
         chain = (
-            {"context": self._ensemble_retriever, "input": RunnablePassthrough()} |
+            {"context": self._ensemble_retriever | format_docs, "input": RunnablePassthrough()} |
             self._chat_prompt |
-            self._llm
+            self._llm |
+            self._output_parser |
+            self._output_parser
         )
         return chain

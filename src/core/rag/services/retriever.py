@@ -16,19 +16,3 @@ class ElasticSearchRetriever(ElasticSearchBM25Retriever):
             index_name=index_name,
             k=k
         )
-
-
-'''from elasticsearch import Elasticsearch
-
-# Подключение к Elasticsearch
-es = Elasticsearch(settings.es.url)
-
-# Имя индекса, который нужно удалить
-index_name = settings.es.index_name
-
-# Удаление индекса
-if es.indices.exists(index=index_name):
-    es.indices.delete(index=index_name)
-    print(f"Индекс '{index_name}' успешно удалён.")
-else:
-    print(f"Индекс '{index_name}' не существует.")'''

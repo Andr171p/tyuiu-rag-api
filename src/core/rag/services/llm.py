@@ -15,6 +15,7 @@ class GigaChatLLM(GigaChat):
         super().__init__(
             credentials=credentials,
             scope=scope,
-            model="GigaChat-Pro",
+            model=model_name,
             verify_ssl_certs=verify_ssl_certs,
+            profanity_check=profanity_check
         )
