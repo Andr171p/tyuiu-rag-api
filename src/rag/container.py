@@ -4,7 +4,9 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_community.chat_models.gigachat import GigaChat
 from langchain_core.output_parsers.string import StrOutputParser
 
-from pinecone import Pinecone
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+
+from pinecone import Pinecone, ServerlessSpec
 
 from src.misc.loaders import load_txt
 from src.config import settings

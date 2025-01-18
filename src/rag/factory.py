@@ -21,7 +21,7 @@ class ChainFactory:
             model: "BaseChatModel",
             output_parser: "BaseTransformOutputParser"
     ) -> None:
-        self._retriever: retriever
+        self._retriever = retriever
         self._prompt = prompt
         self._model = model
         self._output_parser = output_parser
