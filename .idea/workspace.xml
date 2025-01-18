@@ -4,7 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0261eaa4-7bd7-4906-a26c-a70cfdc148e2" name="Changes" comment="[tyuiu-rag-api] 17.01.2025 production" />
+    <list default="true" id="0261eaa4-7bd7-4906-a26c-a70cfdc148e2" name="Changes" comment="[tyuiu-rag-api] 17.01.2025 production v1">
+      <change afterPath="$PROJECT_DIR$/src/pinecone/index.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rag/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rag/container.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rag/depends.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rag/factory.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/repository/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/repository/documents.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api_v1/routers/chat.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/routers/chat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/depends.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/rag/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pinecone/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/rag/chain.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/rag/services/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/rag/services/embeddings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/rag/services/llm.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/rag/services/retriever.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/rag/services/splitter.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/rag/services/vector_store.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/rag/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rag/commons.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/misc/loaders.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/misc/loaders.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/chat.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/chat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/db.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/docs.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/index.py" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,10 +62,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.bm25.executor": "Run",
     "Python.chat.executor": "Run",
     "Python.config.executor": "Run",
+    "Python.connection.executor": "Run",
     "Python.embeddings.executor": "Run",
+    "Python.index (1).executor": "Run",
     "Python.llm.executor": "Run",
+    "Python.test.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/andre/TyuiuRAGAPI/static/texts"
@@ -47,10 +82,35 @@
       <recent name="C:\Users\andre\TyuiuRAGAPI" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\andre\TyuiuRAGAPI\src" />
+      <recent name="C:\Users\andre\TyuiuRAGAPI\src\repository" />
+      <recent name="C:\Users\andre\TyuiuRAGAPI\src\core" />
       <recent name="C:\Users\andre\TyuiuRAGAPI" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.chat">
+  <component name="RunManager" selected="Python.test">
+    <configuration name="bm25" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="TyuiuRAGAPI" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/core/elastic_search" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/core/elastic_search/bm25.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="chat" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="TyuiuRAGAPI" />
       <option name="ENV_FILES" value="" />
@@ -73,7 +133,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="config" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="index (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="TyuiuRAGAPI" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -82,11 +142,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/core/elastic_search" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/config.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/core/elastic_search/index.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -95,7 +155,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="embeddings" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="index" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="TyuiuRAGAPI" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -104,11 +164,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/core/rag/modules" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/pinecone" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/core/rag/modules/embeddings.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\andre\TyuiuRAGAPI\src\pinecone\index.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -117,7 +177,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="llm" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="TyuiuRAGAPI" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -126,11 +186,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/core/rag/modules" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/core/rag/modules/llm.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -141,10 +201,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.bm25" />
+        <item itemvalue="Python.index (1)" />
+        <item itemvalue="Python.index" />
         <item itemvalue="Python.chat" />
-        <item itemvalue="Python.llm" />
-        <item itemvalue="Python.config" />
-        <item itemvalue="Python.embeddings" />
       </list>
     </recent_temporary>
   </component>
@@ -204,7 +265,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737125702417</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="[tyuiu-rag-api] 17.01.2025 production v1">
+      <option name="closed" value="true" />
+      <created>1737125989647</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1737125989647</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -212,6 +281,7 @@
     <MESSAGE value="[tyuiu-rag-api] 14.01.2025" />
     <MESSAGE value="[tyuiu-rag-api] 17.01.2025" />
     <MESSAGE value="[tyuiu-rag-api] 17.01.2025 production" />
-    <option name="LAST_COMMIT_MESSAGE" value="[tyuiu-rag-api] 17.01.2025 production" />
+    <MESSAGE value="[tyuiu-rag-api] 17.01.2025 production v1" />
+    <option name="LAST_COMMIT_MESSAGE" value="[tyuiu-rag-api] 17.01.2025 production v1" />
   </component>
 </project>

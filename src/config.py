@@ -25,19 +25,17 @@ class ChromaSettings(BaseSettings):
 
 
 class ElasticSearchSettings(BaseSettings):
-    """
-    host: str = "localhost"
-    port: int = 9200
-    username: str = "elastic"
-    password: str = "MyPw123"
-    """
-
-    host: str = "elasticsearch-production-ac86.up.railway.app"
-    port: int = 9200
-    username: str = "elastic"
-    password: str = "aa167pdogqvdv7kzc9um3cjwhk2d78z3"
+    host: str = os.getenv("ES_HOST")
+    port: int = os.getenv("ES_PORT")
+    password: str = os.getenv("ES_PASSWORD")
+    username: str = os.getenv("ES_USERNAME")
 
     url: str = f"http://{username}:{password}@{host}:{port}"
+    index_name: str = "tyuiu-index"
+
+
+class PineconeSettings(BaseSettings):
+    api_key: str = os.getenv("PINECONE_API_KEY")
     index_name: str = "tyuiu-index"
 
 
@@ -48,7 +46,6 @@ class GigaChatSettings(BaseSettings):
     scope: str = os.getenv("GIGACHAT_API_PERS")
     url: str = os.getenv("AUTH_URL")
     name: str = os.getenv("MODEL_NAME")
-    prompt: Path = BASE_DIR / "static" / "prompt" / "chat.txt"
 
 
 class StaticSettings(BaseSettings):
@@ -66,6 +63,7 @@ class Settings(BaseSettings):
     embeddings: EmbeddingsSettings = EmbeddingsSettings()
     chroma: ChromaSettings = ChromaSettings()
     es: ElasticSearchSettings = ElasticSearchSettings()
+    pc: PineconeSettings = PineconeSettings()
     giga_chat: GigaChatSettings = GigaChatSettings()
     static: StaticSettings = StaticSettings()
 
