@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0261eaa4-7bd7-4906-a26c-a70cfdc148e2" name="Changes" comment="[tyuiu-rag-api] 18.01.2025">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rag/container.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rag/container.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rag/factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rag/factory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/prompt/Сотрудник приёмной комиссии.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/prompt/Сотрудник приёмной комиссии.txt" afterDir="false" />
+    <list default="true" id="0261eaa4-7bd7-4906-a26c-a70cfdc148e2" name="Changes" comment="[tyuiu-rag-api] 19.01.2025 refactor prompt">
+      <change beforePath="$PROJECT_DIR$/src/api_v1/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api_v1/lifespan.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/lifespan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -259,7 +255,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737214910008</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="[tyuiu-rag-api] 19.01.2025 refactor prompt">
+      <option name="closed" value="true" />
+      <created>1737233012662</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1737233012662</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -269,6 +273,7 @@
     <MESSAGE value="[tyuiu-rag-api] 17.01.2025 production" />
     <MESSAGE value="[tyuiu-rag-api] 17.01.2025 production v1" />
     <MESSAGE value="[tyuiu-rag-api] 18.01.2025" />
-    <option name="LAST_COMMIT_MESSAGE" value="[tyuiu-rag-api] 18.01.2025" />
+    <MESSAGE value="[tyuiu-rag-api] 19.01.2025 refactor prompt" />
+    <option name="LAST_COMMIT_MESSAGE" value="[tyuiu-rag-api] 19.01.2025 refactor prompt" />
   </component>
 </project>

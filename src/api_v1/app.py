@@ -8,7 +8,7 @@ from src.config import settings
 
 app = FastAPI(
     title=settings.api_v1.name,
-    lifespan=lifespan
+    # lifespan=lifespan
 )
 
 app.include_router(rag_router)
